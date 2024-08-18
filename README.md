@@ -51,7 +51,7 @@ Vamos lá
     "typescript": "^5.5.4"
   }
 }
-
+```
 ## Configurando o `package.json`
 
 Faça o mesmo esquema que acima só que copie e cole esse código agora
@@ -144,7 +144,7 @@ app.put('/users/:id', async (req, res) => {
     res.json({ message: 'Usuário excluído' });
   });
   
-
+```
 
 ## Inicializando o servidor
 
@@ -160,8 +160,3 @@ npm run dev
 ##Agora vamos testar 
 
 ---Espero que esteja tudo ocorrendo certo agora va até o seu navegador e pesquise`http://localhost:3333`, você verá a mensagem `Hello World`se estiver tudo certo.
-
-
-
- 
-
