@@ -1,5 +1,5 @@
 # IAMarcos2024-IA22-2TRI
-# Iniciando um projeto Node.js com TypeScript
+# Vamos iniciar um projeto Node.js com TypeScript
 
 
 Olá caro amigo ou amiga tudo certo espero que sim vamos criar um projeto com TyperScript caso vc não saiba oq é TypeScript leia abaixo 
@@ -20,7 +20,7 @@ mkdir src
 touch src/app.ts
 ```
 
-##  Agora vamos configurar o `tsconfig.json`
+## vamos configurar o `tsconfig.json`
 Vamos lá 
 --- Va até seus arquivos e clique "tsconfig.json" depois disso procure por ("outDir": "./") e altere para
 ( "outDir": "./dist",) e assim que vc fizer isso abaixo dessa linha que vc acabou de mexer adicione essa linha ( "rootDir ": "./src";) 
@@ -147,7 +147,7 @@ npm run dev
 
 ---Espero que esteja tudo ocorrendo certo agora va até o seu navegador e pesquise`http://localhost:3333`, você verá a mensagem `Hello World`se estiver tudo certo.
 
-```json
+```typescript
 http://localhost:3333
 ```
 
@@ -155,7 +155,7 @@ http://localhost:3333
 
 Crie mais um arquivo no src, chamado database.ts e dentro dele adicione o seguinte código
 
-```json
+```typescript
 import { Database, open } from 'sqlite';
 import sqlite3 from 'sqlite3';
 
@@ -186,7 +186,7 @@ export async function connect() {
 
 Acesse o arquivo app.ts e cole o seguinte código:
 
-```json
+```typescript
 import express from 'express'
 import cors from 'cors'
 import { connect } from './database'
@@ -218,7 +218,7 @@ app.post('/users', async (req, res) => {
 ---Adicione mais esse código ao seu arquivo "app.ts" 
 cole o código abaixo dentro do "app.ts"
 
-```json
+```typescript
 app.listen(port, () => {
   console.log(`Server running on port ${port}`)
 })
@@ -244,7 +244,7 @@ app.put('/users/:id', async (req, res) => {
 Novamente no arquivo "app.ts"
 cole o seguinte código
 
-```json
+```typescript
 app.delete('/users/:id', async (req, res) => {
   const db = await connect()
   const { id } = req.params
@@ -258,7 +258,7 @@ app.delete('/users/:id', async (req, res) => {
 
 Crie uma pasta chamada public e nela crie o arquivo index.html nesse arquivo cole o seguinte código:
 
-```json
+```typescript
 
 <!DOCTYPE html>
 <html lang="en">
@@ -311,6 +311,7 @@ Crie uma pasta chamada public e nela crie o arquivo index.html nesse arquivo col
     })
 
     // 
+    
     const tbody = document.querySelector('tbody')
 
     async function fetchData() {
@@ -356,17 +357,20 @@ Crie uma pasta chamada public e nela crie o arquivo index.html nesse arquivo col
       })
     }
 
-    fetchData()
+    fetchData()u
   </script>
 </body>
 
 </html>
+
+
+
 ```
 ## Agora vamos testar a inserção de dados
 
 Agora por ultimo dentro da pasta "src" crie o arquivo "ts.http" e depois cole o código abaixo
 
-```json
+```typescript
 POST http://localhost:3333/users
 Content-Type: application/json
 
@@ -379,7 +383,7 @@ Content-Type: application/json
 
 Abra seu navegador, vá na barra de pesquisa e digite http://localhost:3333/users ;
 
-```json
+```typescript
 http://localhost:3333/users
 ```
 
