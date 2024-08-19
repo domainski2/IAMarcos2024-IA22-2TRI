@@ -8,7 +8,24 @@ Olá caro amigo ou amiga tudo certo espero que sim vamos criar um projeto com Ty
 
 --  acesse-a a (pasta que vc criou) pelo vscode, abra o terminal e siga os passos abaixo.
 
--- Um de cada vez para abrir o terminal só vc clicar Ctrl + "
+
+## Ou para funcionar mais certo de fato
+
+-- Abra seu GitHub e crie um repósitorio e acesse o codespace para trabalhar por la caso vc não saiba criar um repositório e não saiba abrir o codespace siga os passos abaixo
+
+## Como criar um repósitorio
+
+-- Quando você acessar seu perfil no Github la em cima do lado da bola que esta sua imagem de perfil vai ter um "+" clique nele e depois clique em criar novo repositório
+assim que você clicar somente de o nome ao repositório e clique em "ADD README" e depois em criar respositório e assim você criou seu repósitorio.
+## Abrindo Codesapace
+ 
+-- Agora que você criou seu repositório ele vai abrir uma tela com o nome do seu repositório em seguida disso clique no quadrado verde onde está escrito código caso estiver em inglês favor ir na configuração do google para traduzir bom. Em seguida clique no quadrado verde onde está escrito código depois clique em codespace e criar codespace e agora mãos a obra. Vai abrir  um Vscode só que dentro do Github oque fica mais facil para você reailizar esse projeto.
+
+
+## vamos iniciar 
+coloque os comandos abaixo um de cada vez se colocar tudo de uma vez vai dar erro.
+
+-- Um de cada vez para (abrir o terminal só vc clicar Ctrl "+")
 
 ```bash
 npm init -y
@@ -43,7 +60,7 @@ Vamos lá
 ```
   
 
-## Agora vamos configurar o `package.json`
+## Configurando o `package.json`
 
 --  Agora no mesmo esquema igual foi feito anteriormente nos seus arquivos clique em "package.json"
 
@@ -131,7 +148,7 @@ app.put('/users/:id', async (req, res) => {
   
 ```
 
-## vamos inicializar o servidor
+## Inicializando o servidor
 
 -- Agora antes de iniciarmos instale a Biblioteca "Rest Client" para baixar va até o canto esquerdo da tela e vc vai ver 4 quadrados basta clicar em cima e pesquisar "Rest Client" e dps clicar em dowload.
 
@@ -150,7 +167,7 @@ npm run dev
 http://localhost:3333
 ```
 
-## Vamos configurar o banco de dados
+## Configurando o banco de dados
 
 Crie mais um arquivo no src, chamado database.ts e dentro dele adicione o seguinte código
 
@@ -223,7 +240,7 @@ app.listen(port, () => {
 })
 ```
 
-## Vamos editar um Usuário
+## Editando um Usuário
 
 --Novamente no seu arquivo "app.ts"
 cole o seguinte o código 
@@ -238,7 +255,7 @@ app.put('/users/:id', async (req, res) => {
 }
 ``` 
 
-## agora vamos deletar um Usuário
+## Deletando um Usuário
 
 Novamente no arquivo "app.ts"
 cole o seguinte código
