@@ -2,9 +2,7 @@
 # Iniciando um projeto Node.js com TypeScript
 
 
-Olá caro amigo ou amiga tudo certo espero que sim vamos criar um projeto com TyperScript caso vc não saiba oq é TypeScript leia abaixo 
-
-TypeScript : TypeScript é uma linguagem desenvolvida pela Microsoft que estende o JavaScript adicionando tipagem estática e outras funcionalidades avançadas. Ele permite que você defina tipos para variáveis, funções e objetos, o que ajuda a identificar erros durante o desenvolvimento antes da execução do código.
+Olá caro amigo ou amiga tudo certo espero que sim vamos criar um projeto com TyperScript.
 
 -- Agora vamos direto ao ponto para começar na sua area de trabalho crie uma pasta e de um nome qualquer 
 
