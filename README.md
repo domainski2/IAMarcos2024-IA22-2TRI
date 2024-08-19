@@ -43,7 +43,7 @@ Vamos lá
 ```
   
 
-## Configurando o `package.json`
+## Agora vamos configurar o `package.json`
 
 --  Agora no mesmo esquema igual foi feito anteriormente nos seus arquivos clique em "package.json"
 
@@ -131,7 +131,7 @@ app.put('/users/:id', async (req, res) => {
   
 ```
 
-## Inicializando o servidor
+## vamos inicializar o servidor
 
 -- Agora antes de iniciarmos instale a Biblioteca "Rest Client" para baixar va até o canto esquerdo da tela e vc vai ver 4 quadrados basta clicar em cima e pesquisar "Rest Client" e dps clicar em dowload.
 
@@ -150,7 +150,7 @@ npm run dev
 http://localhost:3333
 ```
 
-## Configurando o banco de dados
+## Vamos configurar o banco de dados
 
 Crie mais um arquivo no src, chamado database.ts e dentro dele adicione o seguinte código
 
@@ -223,7 +223,7 @@ app.listen(port, () => {
 })
 ```
 
-## Editando um Usuário
+## Vamos editar um Usuário
 
 --Novamente no seu arquivo "app.ts"
 cole o seguinte o código 
@@ -238,7 +238,7 @@ app.put('/users/:id', async (req, res) => {
 }
 ``` 
 
-## Deletando um Usuário
+## agora vamos deletar um Usuário
 
 Novamente no arquivo "app.ts"
 cole o seguinte código
