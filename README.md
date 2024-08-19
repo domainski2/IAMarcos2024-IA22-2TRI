@@ -2,14 +2,13 @@
 # Vamos iniciar um projeto Node.js com TypeScript
 
 
-Olá caro amigo ou amiga tudo certo espero que sim vamos criar um projeto com TyperScript caso vc não saiba oq é TypeScript leia abaixo 
+Olá caro amigo ou amiga tudo certo espero que sim vamos criar um projeto com TyperScript.
 
-TypeScript : TypeScript é uma linguagem desenvolvida pela Microsoft que estende o JavaScript adicionando tipagem estática e outras funcionalidades avançadas. Ele permite que você defina tipos para variáveis, funções e objetos, o que ajuda a identificar erros durante o desenvolvimento antes da execução do código.
+-- Agora vamos direto ao ponto para começar na sua area de trabalho crie uma pasta e de um nome qualquer 
 
----Agora vamos direto ao ponto para começar na sua area de trabalho crie uma pasta e de um nome qualquer 
+--  acesse-a a (pasta que vc criou) pelo vscode, abra o terminal e siga os passos abaixo.
 
---- acesse-a a (pasta que vc criou) pelo vscode, abra o terminal e siga os passos abaixo.
----Um de cada vez para abrir o terminal só vc clicar Ctrl + "
+-- Um de cada vez para abrir o terminal só vc clicar Ctrl + "
 
 ```bash
 npm init -y
@@ -22,10 +21,10 @@ touch src/app.ts
 
 ## vamos configurar o `tsconfig.json`
 Vamos lá 
---- Va até seus arquivos e clique "tsconfig.json" depois disso procure por ("outDir": "./") e altere para
+-- Va até seus arquivos e clique "tsconfig.json" depois disso procure por ("outDir": "./") e altere para
 ( "outDir": "./dist",) e assim que vc fizer isso abaixo dessa linha que vc acabou de mexer adicione essa linha ( "rootDir ": "./src";) 
 
---- Seu código vai estar assim igual a baixo
+-- Seu código vai estar assim igual a baixo
 
 ```json
 {
@@ -46,11 +45,11 @@ Vamos lá
 
 ## Configurando o `package.json`
 
---- Agora no mesmo esquema igual foi feito anteriormente nos seus arquivos clique em "package.json"
+--  Agora no mesmo esquema igual foi feito anteriormente nos seus arquivos clique em "package.json"
 
 --- Em seguida na linha ("test": "echo \"Error: no test specified\" && exit 1",) vc vai adicionar uma simples , e na linha de baixo vc vai por esse comando "dev": "npx nodemon src/app.ts";
 
---- Vai ficar assim
+-- Vai ficar assim
 
 ```json
 
@@ -134,14 +133,14 @@ app.put('/users/:id', async (req, res) => {
 
 ## Inicializando o servidor
 
---- Agora antes de iniciarmos instale a Biblioteca "Rest Client" para baixar va até o canto esquerdo da tela e vc vai ver 4 quadrados basta clicar em cima e pesquisar "Rest Client" e dps clicar em dowload.
+-- Agora antes de iniciarmos instale a Biblioteca "Rest Client" para baixar va até o canto esquerdo da tela e vc vai ver 4 quadrados basta clicar em cima e pesquisar "Rest Client" e dps clicar em dowload.
 
 Agora volte até sua pagina e abra o terminal lembre-se para abrir clique (Ctrl + ") em seguida escreva esse comando 
 
 ```node
 npm run dev
 ```
---- Se deu tudo certinho vai aparecer essa mensagem `Server running on port 3333` no terminal
+-- Se deu tudo certinho vai aparecer essa mensagem `Server running on port 3333` no terminal
 
 ## Agora vamos testar
 
@@ -215,7 +214,7 @@ app.post('/users', async (req, res) => {
 ```
 ## Listando os Usuários
 
----Adicione mais esse código ao seu arquivo "app.ts" 
+--Adicione mais esse código ao seu arquivo "app.ts" 
 cole o código abaixo dentro do "app.ts"
 
 ```typescript
@@ -226,7 +225,7 @@ app.listen(port, () => {
 
 ## Editando um Usuário
 
----Novamente no seu arquivo "app.ts"
+--Novamente no seu arquivo "app.ts"
 cole o seguinte o código 
 ```json
 app.put('/users/:id', async (req, res) => {
@@ -256,7 +255,7 @@ app.delete('/users/:id', async (req, res) => {
 
 ## Agora finalizando ja
 
-Crie uma pasta chamada public e nela crie o arquivo index.html nesse arquivo cole o seguinte código:
+--Crie uma pasta chamada public e nela crie o arquivo index.html nesse arquivo cole o seguinte código:
 
 ```typescript
 
@@ -368,7 +367,7 @@ Crie uma pasta chamada public e nela crie o arquivo index.html nesse arquivo col
 ```
 ## Agora vamos testar a inserção de dados
 
-Agora por ultimo dentro da pasta "src" crie o arquivo "ts.http" e depois cole o código abaixo
+--Agora por ultimo dentro da pasta "src" crie o arquivo "ts.http" e depois cole o código abaixo
 
 ```typescript
 POST http://localhost:3333/users
@@ -379,7 +378,7 @@ Content-Type: application/json
   "email" : "BomDia"
 }
 ```
-## Ultima coisa agora 
+--## Ultima coisa agora 
 
 Abra seu navegador, vá na barra de pesquisa e digite http://localhost:3333/users ;
 
