@@ -252,7 +252,7 @@ app.delete('/users/:id', async (req, res) => {
 })
 
 ```
->>>>>>> a64f676e4c57498fb83b16175dfec9471b6090ba
+
 
 ## Agora finalizando ja
 
