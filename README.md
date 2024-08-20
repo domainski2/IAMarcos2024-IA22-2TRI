@@ -179,7 +179,7 @@ export async function connect() {
 }
 ```
 
-<<<<<<< HEAD
+
 =======
 ## Agora vamos adicionar o banco de dados ao servidor
 
