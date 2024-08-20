@@ -82,69 +82,50 @@ Vamos lá
 Crie um arquivo src e dentro dele crie outro chamado app.ts e adicione o seguinte código:
 
 ```typescript
-import express from 'express';
-import cors from 'cors';
-import { connect } from './database';
+import express from 'express'
+import cors from 'cors'
+import { connect } from './database'
 
-const port = 3333;
-const app = express();
+const port = 3333
+const app = express()
 
-app.use(cors());
-app.use(express.json());
-
-
-app.get('/', (req, res) => {
-  res.send('Olá Mundo');
-});
-
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-  });
-  
-
-
-app.post('/users', async (req, res) => {
-  const db = await connect();
-  const { name, email } = req.body;
-
-  const result = await db.run('INSERT INTO users (name, email) VALUES (?, ?)', [name, email]);
-  const user = await db.get('SELECT * FROM users WHERE id = ?', [result.lastID]);
-
-  res.json(user);
-});
-
+app.use(cors())
+app.use(express.json())
+app.use(express.static(__dirname + '/../public'))
 
 app.get('/users', async (req, res) => {
-  const db = await connect();
-  const users = await db.all('SELECT * FROM users');
+  const db = await connect()
+  const users = await db.all('SELECT * FROM users')
+  res.json(users)
+})
 
-  res.json(users);
-});
-
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+app.post('/users', async (req, res) => {
+  const db = await connect()
+  const { name, email } = req.body
+  const result = await db.run('INSERT INTO users (name, email) VALUES (?, ?)', [name, email])
+  const user = await db.get('SELECT * FROM users WHERE id = ?', [result.lastID])
+  res.json(user)
+})
 
 app.put('/users/:id', async (req, res) => {
-    const db = await connect();
-    const { name, email } = req.body;
-    const { id } = req.params;
-  
-    await db.run('UPDATE users SET name = ?, email = ? WHERE id = ?', [name, email, id]);
-    const user = await db.get('SELECT * FROM users WHERE id = ?', [id]);
-  
-    res.json(user);
-  });
-  
-  app.delete('/users/:id', async (req, res) => {
-    const db = await connect();
-    const { id } = req.params;
-  
-    await db.run('DELETE FROM users WHERE id = ?', [id]);
-  
-    res.json({ message: 'Usuário excluído' });
-  });
+  const db = await connect()
+  const { name, email } = req.body
+  const { id } = req.params
+  await db.run('UPDATE users SET name = ?, email = ? WHERE id = ?', [name, email, id])
+  const user = await db.get('SELECT * FROM users WHERE id = ?', [id])
+  res.json(user)
+})
+
+app.delete('/users/:id', async (req, res) => {
+  const db = await connect()
+  const { id } = req.params
+  await db.run('DELETE FROM users WHERE id = ?', [id])
+  res.json({ message: 'User deleted' })
+})
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`)
+})
   
 ```
 
@@ -198,6 +179,8 @@ export async function connect() {
 }
 ```
 
+<<<<<<< HEAD
+=======
 ## Agora vamos adicionar o banco de dados ao servidor
 
 Acesse o arquivo app.ts e cole o seguinte código:
@@ -269,6 +252,7 @@ app.delete('/users/:id', async (req, res) => {
 })
 
 ```
+>>>>>>> a64f676e4c57498fb83b16175dfec9471b6090ba
 
 ## Agora finalizando ja
 
